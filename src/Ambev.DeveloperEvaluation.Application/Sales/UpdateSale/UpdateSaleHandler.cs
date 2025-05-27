@@ -40,6 +40,7 @@ public class UpdateSaleHandler : IRequestHandler<UpdateSaleCommand, UpdateSaleRe
     /// <returns>The created sale details</returns>
     public async Task<UpdateSaleResult> Handle(UpdateSaleCommand command, CancellationToken cancellationToken)
     {
+        var result = new UpdateSaleResult();
         var validator = new UpdateSaleValidator();
         var validationResult = await validator.ValidateAsync(command, cancellationToken);
 
@@ -89,9 +90,9 @@ public class UpdateSaleHandler : IRequestHandler<UpdateSaleCommand, UpdateSaleRe
             }
 
             var updatedSale = await _saleRepository.UpdateAsync(saleDb, cancellationToken);
+            result = _mapper.Map<UpdateSaleResult>(updatedSale);
         }
 
-        var result = _mapper.Map<UpdateSaleResult>(saleDb);
         return result;
     }
 }
