@@ -1,3 +1,5 @@
+# Developer Evaluation Project
+
 ## Get started
 
 To run the project, insert a valid connection string in the file located in the project "Ambev.DeveloperEvaluation.WebApi" called "appsettings.Development.json".
@@ -8,7 +10,9 @@ After inserting the connection string, open the Package Manager Console, select 
 - PM> Update-Database
 ```
 
-# Developer Evaluation Project
+* Based on git flow:: https://github.com/jmrqs/streaming?tab=readme-ov-file#development-guidelines
+
+https://github.com/jmrqs/streaming
 
 `READ CAREFULLY`
 
