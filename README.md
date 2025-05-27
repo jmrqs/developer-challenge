@@ -1,3 +1,13 @@
+## Get started
+
+To run the project, insert a valid connection string in the file located in the project "Ambev.DeveloperEvaluation.WebApi" called "appsettings.Development.json".
+
+After inserting the connection string, open the Package Manager Console, select the project "Ambev.DeveloperEvaluation.WebApi", and execute the following commands:
+```
+- PM> Add-Migration
+- PM> Update-Database
+```
+
 # Developer Evaluation Project
 
 `READ CAREFULLY`
