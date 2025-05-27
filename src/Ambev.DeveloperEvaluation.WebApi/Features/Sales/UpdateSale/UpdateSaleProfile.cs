@@ -1,8 +1,8 @@
+using Ambev.DeveloperEvaluation.Application.Sales.CreateSale;
 using Ambev.DeveloperEvaluation.Application.Sales.UpdateSale;
 using Ambev.DeveloperEvaluation.Application.Sales.UpdateSale.Validators;
 using Ambev.DeveloperEvaluation.Domain.Entities;
-using Ambev.DeveloperEvaluation.WebApi.Features.Sales.UpdateSale.Request;
-using Ambev.DeveloperEvaluation.WebApi.Features.Sales.UpdateSale.Response;
+using Ambev.DeveloperEvaluation.WebApi.Features.Sales.CreateSale;
 using AutoMapper;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales.UpdateSale;
@@ -18,18 +18,11 @@ public class UpdateSaleProfile : Profile
     public UpdateSaleProfile()
     {
         CreateMap<UpdateSaleRequest, UpdateSaleCommand>();
-        CreateMap<UpdateSaleResult, UpdateSaleResponse>();
-        CreateMap<Sale, UpdateSaleResult>();
-    }
+        CreateMap<UpdateSaleResult, UpdateSaleResponse>()
+                .ForMember(m => m.SaleId, opt => opt.MapFrom(x => x.Id));
 
-    /// <summary>
-    /// Initializes the mappings for UpdateItemSale feature
-    /// </summary>
-    public class UpdateItemSale : Profile
-    {
-        public UpdateItemSale()
-        {
-            CreateMap<UpdateSaleItemRequest, UpdateSaleItemCommand>();
-        }
+        CreateMap<UpdateSaleItemRequest, UpdateSaleItemCommand>();
+        CreateMap<UpdateSaleItemResult, UpdateSaleItemResponse>();
+        CreateMap<SaleItem, UpdateSaleItemResult>();
     }
 }
