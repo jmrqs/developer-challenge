@@ -10,9 +10,7 @@ After inserting the connection string, open the Package Manager Console, select 
 - PM> Update-Database
 ```
 
-* Based on git flow:: https://github.com/jmrqs/streaming?tab=readme-ov-file#development-guidelines
-
-https://github.com/jmrqs/streaming
+* Based on git flow: [https://github.com/jmrqs/development-guidelines](https://github.com/jmrqs/development-guidelines)
 
 `READ CAREFULLY`
 
