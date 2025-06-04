@@ -1,35 +1,11 @@
 ﻿namespace Ambev.DeveloperEvaluation.Domain.Interfaces.Entities
 {
-    /// <summary>
-    /// Defines the contract for representing a sale item in the system.
-    /// </summary>
     public interface ISaleItem
     {
-        /// <summary>
-        /// Unique identifier of the product being sold.
-        /// </summary>
         Guid ProductId { get; set; }
-
-        /// <summary>
-        /// Quantity of the product included in the sale.
-        /// </summary>
         int Quantity { get; set; }
-
-        /// <summary>
-        /// Unit price of the product at the time of the sale.
-        /// </summary>
         decimal UnitPrice { get; set; }
-
-        /// <summary>
-        /// Discounts applied to the product.
-        /// </summary>
         public decimal Discount { get; set; }
-
-        /// <summary>
-        /// Calculate product discounts.
-        /// </summary>
-        /// <returns></returns>
-        /// <exception cref="InvalidOperationException"></exception>
         public decimal CalculateDiscounts()
         {
             if (Quantity > 20)

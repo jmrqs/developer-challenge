@@ -1,4 +1,4 @@
-using Ambev.DeveloperEvaluation.Domain.Enums;
+using Ambev.DeveloperEvaluation.Common.Enums;
 
 namespace Ambev.DeveloperEvaluation.Application.Sales.GetSale;
 

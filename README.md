@@ -1,5 +1,21 @@
 # Developer Evaluation Project
 
+## Scope
+
+Implemented **Sales only**. Examples:
+
+- Entity
+  - Sale (rules-based below): https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Domain/Entities/Sale.cs
+  - SaleItem: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Domain/Entities/SaleItem.cs
+
+- Handlers
+  - CreateSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/CreateSale/CreateSaleHandler.cs
+  - GetSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/GeteSale/GetSaleHandler.cs
+  - UpdateSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/UpdateSale/UpdateSaleHandler.cs
+  - DeleteSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/DeleteSale/DeleteSaleHandler.cs
+
+
+
 ## Get started
 
 To run the project, insert a valid connection string in the file located in the project "Ambev.DeveloperEvaluation.WebApi" called "appsettings.Development.json".
