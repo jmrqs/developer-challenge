@@ -10,7 +10,7 @@ Implemented **Sales only**. Examples:
 
 - Handlers
   - CreateSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/CreateSale/CreateSaleHandler.cs
-  - GetSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/GeteSale/GetSaleHandler.cs
+  - GetSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/GetSale/GetSaleHandler.cs
   - UpdateSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/UpdateSale/UpdateSaleHandler.cs
   - DeleteSale: https://github.com/jmrqs/developer-challenge/blob/main/src/Ambev.DeveloperEvaluation.Application/Sales/DeleteSale/DeleteSaleHandler.cs
 
