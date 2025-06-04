@@ -21,23 +21,12 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        /// <summary>
-        /// Initializes a new instance of SalesController
-        /// </summary>
-        /// <param name="mediator">The mediator instance</param>
-        /// <param name="mapper">The AutoMapper instance</param>
         public SalesController(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
             _mapper = mapper;
         }
 
-        /// <summary>
-        /// Create a new sale
-        /// </summary>
-        /// <param name="request">The sale creation request</param>
-        /// <param name="cancellationToken">Cancellation token</param>
-        /// <returns>The created sale details</returns>
         [HttpPost]
         [ProducesResponseType(typeof(ApiResponseWithData<CreateSaleResponse>), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
@@ -60,13 +49,6 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
             });
         }
 
-        /// <summary>
-        /// Retrieves a paginated list of sales.
-        /// </summary>
-        /// <param name="pageNumber">The page number for pagination (default is 1).</param>
-        /// <param name="pageSize">The number of items per page (default is 20).</param>
-        /// <param name="cancellationToken">Cancellation token to cancel the request.</param>
-        /// <returns>A paginated list of sales if found.</returns>
         [HttpGet]
         [ProducesResponseType(typeof(ApiResponseWithData<GetSaleResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
@@ -103,12 +85,6 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
             });
         }
 
-        /// <summary>
-        /// Update a new sale
-        /// </summary>
-        /// <param name="request">The sale update request</param>
-        /// <param name="cancellationToken">Cancellation token</param>
-        /// <returns>The updated sale details</returns>
         [HttpPut]
         [ProducesResponseType(typeof(ApiResponseWithData<UpdateSaleResponse>), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
@@ -138,12 +114,6 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
             });
         }
 
-        /// <summary>
-        /// Deletes a sale by their ID
-        /// </summary>
-        /// <param name="id">The unique identifier of the sale to delete</param>
-        /// <param name="cancellationToken">Cancellation token</param>
-        /// <returns>Success response if the sale was deleted</returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]

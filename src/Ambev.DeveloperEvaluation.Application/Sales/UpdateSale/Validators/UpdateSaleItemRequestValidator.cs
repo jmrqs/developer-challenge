@@ -2,20 +2,8 @@
 
 namespace Ambev.DeveloperEvaluation.Application.Sales.UpdateSale.Validators;
 
-/// <summary>
-/// Validator for SaleItemRequest that defines validation rules for each item in a sale.
-/// </summary>
 public class UpdateSaleItemRequestValidator : AbstractValidator<UpdateSaleItemCommand>
 {
-    /// <summary>
-    /// Initializes a new instance of the SaleItemRequestValidator with defined validation rules.
-    /// </summary>
-    /// <remarks>
-    /// Validation rules include:
-    /// - ProductId: Must not be empty
-    /// - Quantity: Must be greater than zero
-    /// - UnitPrice: Must be greater than zero
-    /// </remarks>
     public UpdateSaleItemRequestValidator()
     {
         RuleFor(item => item.ProductId)

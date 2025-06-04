@@ -1,5 +1,5 @@
+using Ambev.DeveloperEvaluation.Common.Enums;
 using Ambev.DeveloperEvaluation.Domain.Common;
-using Ambev.DeveloperEvaluation.Domain.Enums;
 using Ambev.DeveloperEvaluation.Domain.Interfaces.Entities;
 
 namespace Ambev.DeveloperEvaluation.Domain.Entities;
